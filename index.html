@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.css" rel="stylesheet">
+</head>
+<body>
+    <header></header>
+    <main>
+        <h1>
+            <h2>
+                <p>
+                    Input the number:
+                    <input type="text" class="form-control" placeholder="Your number" aria-label="Username" aria-describedby="basic-addon1" id="mynum">
+                </p>
+                <button type="button" class="btn btn-sm btn-outline-secondary" onclick="checkNum()">Guess</button>
+                <hr>
+            </h2>
+            <h2>
+                <h3>
+                    Attempts:
+                    <span id="attempts"></span>
+                </h3>
+                <h3>
+                    <p id="out"></p>
+                </h3>
+            </h2>
+        </h1>
+        <hr>
+    </main>
+
+    <footer class="text-muted py-5">
+        <p>
+            The thinker thinks of a number from <span id="min"></span> to <span id="max"></span> inclusive.
+            The guesser has 7 guesses to guess the number. If they take more than 7 guesses to guess the number, they lose. The guesser can't guess anything other than a number, or they lose.
+            Every time the guesser guesses, the thinker must (honestly) give one of three responses: your guess is too big, your guess is too small, or your guess is the correct number. If the number is correct, the guesser wins.
+            There's a catch. Every time the answer is "too big", the guesser loses a life. The guesser has three lives at the start of the game. If they have no lives left, they lose.
+        </p>
+        <p>
+            Test:
+            <span id="outNum"></span>
+        </p>
+    </footer>
+
+</body>
+<script type="text/javascript" src="js/game.js" defer></script>
+<script type="text/javascript" src="js/bootstrap.bundle.js" defer></script>
+</html>
