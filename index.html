@@ -11,11 +11,13 @@
     <main>
         <h1>
             <h2>
-                <p>
-                    Input the number:
-                    <input type="text" class="form-control" placeholder="Your number" aria-label="Username" aria-describedby="basic-addon1" id="mynum">
-                </p>
-                <button type="button" class="btn btn-sm btn-outline-secondary" onclick="checkNum()">Guess</button>
+                <form class="row g-3" id="form">
+                    <div class="col-md-4">
+                        <label for="mynum" class="form-label">Input the number:</label>
+                        <input type="text" class="form-control" placeholder="Your number" aria-describedby="basic-addon1" id="mynum" pattern="( )*[0-9]+( )*">
+                    </div>
+                    <button class="btn btn-sm btn-outline-secondary" id="btn" onsubmit="return false">Guess</button>
+                </form>
                 <hr>
             </h2>
             <h2>
@@ -45,6 +47,6 @@
     </footer>
 
 </body>
-<script type="text/javascript" src="js/game.js" defer></script>
 <script type="text/javascript" src="js/bootstrap.bundle.js" defer></script>
+<script type="text/javascript" src="js/game.js" defer></script>
 </html>

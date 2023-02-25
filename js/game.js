@@ -8,31 +8,26 @@ document.getElementById('min').innerHTML = min;
 document.getElementById('max').innerHTML = max;
 document.getElementById('attempts').innerHTML = attempts;
 
-function checkNum() {
-	var out = document.getElementById('out');
-	if (flagWin) {
-		return;
-	}
-	if (attempts > 0) {
-		attempts -= 1
-		let num = document.getElementById('mynum').value;
-		document.getElementById('attempts').innerHTML = attempts;
+document.getElementById('btn').onclick = function () {
+    var out = document.getElementById('out');
+    if (flagWin) {
+        return;
+    }
 
-		if (attempts > 0) {
-			if (num == prNum) {
-				out.innerHTML = "You won!";
-				flagWin = true;
-			} else if (num > prNum) {
-				out.innerHTML = "Less";
-			} else {
-				out.innerHTML = "More";
-			}
-		} else {
-			if (num == prNum) {
-				out.innerHTML = "You won!";
-			} else {
-				out.innerHTML = "You lose";
-			}
-		}
-	}
+    let num = document.getElementById('mynum').value;
+    if (attempts > 0 && /( )*\d+( )*/.exec(num)) {
+        attempts -= 1
+        document.getElementById('attempts').innerHTML = attempts;
+
+        if (num == prNum) {
+            out.innerHTML = "You won!";
+            flagWin = true;
+        } else if (attempts == 0) {
+            out.innerHTML = "You lose";
+        } else if (num > prNum) {
+            out.innerHTML = "Less";
+        } else {
+            out.innerHTML = "More";
+        }
+    }
 }
