@@ -7,44 +7,46 @@
     <link href="css/bootstrap.css" rel="stylesheet">
 </head>
 <body>
-    <header></header>
-    <main>
-        <h1>
-            <h2>
-                <form class="row g-3" id="form">
-                    <div class="col-md-4">
-                        <label for="mynum" class="form-label">Input the number:</label>
-                        <input type="text" class="form-control" placeholder="Your number" aria-describedby="basic-addon1" id="mynum" pattern="( )*[0-9]+( )*">
-                    </div>
-                    <button class="btn btn-sm btn-outline-secondary" id="btn" onsubmit="return false">Guess</button>
-                </form>
-                <hr>
-            </h2>
-            <h2>
-                <h3>
-                    Attempts:
-                    <span id="attempts"></span>
-                </h3>
-                <h3>
-                    <p id="out"></p>
-                </h3>
-            </h2>
-        </h1>
-        <hr>
-    </main>
+<header></header>
+<main>
+    <h1>
+        <form class="form-inline" id="form">
+            <div class="row">
+                <span class="col-sm-auto">
+                    <label for="input-num">Your number:</label>
+                </span>
+                <span class="col-sm-auto">
+                    <input type="number" id="input-num" class="form-control-sm" required>
+                </span>
+                <span class="col-sm-auto">
+                    <button class="btn btn-secondary" id="btn">Guess</button>
+                </span>
+            </div>
+            <div class="row">
+                <span class="col-sm-auto">Attempts:</span>
+                <span class="col-sm-auto" id="attempts"></span>
+            </div>
+        </form>
+        <p id="out"></p>
+    </h1>
+    <hr>
+</main>
 
-    <footer class="text-muted py-5">
-        <p>
-            The thinker thinks of a number from <span id="min"></span> to <span id="max"></span> inclusive.
-            The guesser has 7 guesses to guess the number. If they take more than 7 guesses to guess the number, they lose. The guesser can't guess anything other than a number, or they lose.
-            Every time the guesser guesses, the thinker must (honestly) give one of three responses: your guess is too big, your guess is too small, or your guess is the correct number. If the number is correct, the guesser wins.
-            There's a catch. Every time the answer is "too big", the guesser loses a life. The guesser has three lives at the start of the game. If they have no lives left, they lose.
-        </p>
-        <p>
-            Test:
-            <span id="outNum"></span>
-        </p>
-    </footer>
+<footer class="text-muted py-5">
+    <p>
+        The thinker thinks of a number from 10 to 100 inclusive.
+        The guesser has 7 guesses to guess the number. If they take more than 7 guesses to guess the number, they lose.
+        The guesser can't guess anything other than a number, or they lose.
+        Every time the guesser guesses, the thinker must (honestly) give one of three responses: your guess is too big,
+        your guess is too small, or your guess is the correct number. If the number is correct, the guesser wins.
+        There's a catch. Every time the answer is "too big", the guesser loses a life. The guesser has three lives at
+        the start of the game. If they have no lives left, they lose.
+    </p>
+    <p>
+        Test:
+        <span id="outNum"></span>
+    </p>
+</footer>
 
 </body>
 <script type="text/javascript" src="js/bootstrap.bundle.js" defer></script>
