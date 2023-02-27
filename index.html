@@ -9,43 +9,41 @@
 <body>
 <header></header>
 <main>
-    <h1>
-        <form class="form-inline" id="form">
-            <div class="row">
+    <form class="form-inline" id="form">
+        <div class="container">
+            <h1 class="mt-0">
                 <span class="col-sm-auto">
-                    <label for="input-num">Your number:</label>
+                    <label for="input-num" class="col-sm-auto">Your number:</label>
                 </span>
-                <span class="col-sm-auto">
-                    <input type="number" id="input-num" class="form-control-sm" required>
-                </span>
-                <span class="col-sm-auto">
-                    <button class="btn btn-secondary" id="btn">Guess</button>
-                </span>
+            </h1>
+            <div class="input-group mb-3">
+                <input type="number" id="input-num" class="form-control" required>
+                <button class="btn btn-outline-secondary" id="btn">Guess</button>
             </div>
-            <div class="row">
-                <span class="col-sm-auto">Attempts:</span>
-                <span class="col-sm-auto" id="attempts"></span>
-            </div>
-        </form>
-        <p id="out"></p>
-    </h1>
+            <div class="lead" id="attempts"></div>
+            <p id="out" class="lead"></p>
+        </div>
+    </form>
     <hr>
 </main>
 
-<footer class="text-muted py-5">
-    <p>
-        The thinker thinks of a number from 10 to 100 inclusive.
-        The guesser has 7 guesses to guess the number. If they take more than 7 guesses to guess the number, they lose.
-        The guesser can't guess anything other than a number, or they lose.
-        Every time the guesser guesses, the thinker must (honestly) give one of three responses: your guess is too big,
-        your guess is too small, or your guess is the correct number. If the number is correct, the guesser wins.
-        There's a catch. Every time the answer is "too big", the guesser loses a life. The guesser has three lives at
-        the start of the game. If they have no lives left, they lose.
-    </p>
-    <p>
+<footer class="container">
+    <div>
+        The thinker thinks of a number from <span id="min"></span> to <span id="max"></span> inclusive.
+        The guesser has <span id="attempts1"></span> guesses to guess the number. If they take more than <span id="attempts2"></span> guesses to guess the number, they lose.
+        <div>
+            Every time the guesser guesses, the thinker must give one of three responses:
+        </div>
+        <div class="ms-3">your guess is too big,</div>
+        <div class="ms-3">your guess is too small,</div>
+        <div class="ms-3">or your guess is the correct number.</div>
+        If the number is correct, the guesser wins.
+    </div>
+
+    <div class="mt-5">
         Test:
         <span id="outNum"></span>
-    </p>
+    </div>
 </footer>
 
 </body>

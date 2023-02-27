@@ -3,23 +3,22 @@ const prNum = Math.floor(Math.random() * (max - min) + min);
 let attempts = Math.round(Math.log2(max - min + 1));
 let flagWin = false;
 
-document.getElementById('attempts').innerHTML = attempts;
+document.getElementById('attempts').innerHTML = "Attempts: " + attempts;
 
 let inputNum = document.getElementById('input-num');
 inputNum.min = min;
 inputNum.max = max;
+
+let out = document.getElementById('out');
 
 document.getElementById('form').onsubmit = function () {
     if (flagWin) {
         return false;
     }
 
-    let out = document.getElementById('out');
     const num = inputNum.value;
-
     if (attempts > 0) {
-        attempts -= 1
-        document.getElementById('attempts').innerHTML = attempts;
+        document.getElementById('attempts').innerHTML = "Attempts: " + (attempts -= 1);
 
         if (num == prNum) {
             out.innerHTML = "You won!";
@@ -38,3 +37,7 @@ document.getElementById('form').onsubmit = function () {
 }
 
 document.getElementById('outNum').innerHTML = prNum;
+document.getElementById('min').innerHTML = min;
+document.getElementById('max').innerHTML = max;
+document.getElementById('attempts1').innerHTML = attempts;
+document.getElementById('attempts2').innerHTML = attempts;
