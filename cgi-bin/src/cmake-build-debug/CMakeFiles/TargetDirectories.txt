@@ -1,3 +1,0 @@
-D:/University/6 semester/Networks/GuessTheNumberCgi/cgi-bin/CgiScriptCode/cmake-build-debug/CMakeFiles/test.dir
-D:/University/6 semester/Networks/GuessTheNumberCgi/cgi-bin/CgiScriptCode/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/University/6 semester/Networks/GuessTheNumberCgi/cgi-bin/CgiScriptCode/cmake-build-debug/CMakeFiles/rebuild_cache.dir
