@@ -9,7 +9,7 @@
 <body>
 <header></header>
 <main>
-    <form class="form-inline" id="form">
+    <form action="cgi-bin/test.cgi" method="GET" class="form-inline" id="form">
         <div class="container">
             <h1 class="mt-0">
                 <span class="col-sm-auto">
@@ -17,12 +17,18 @@
                 </span>
             </h1>
             <div class="input-group mb-3">
-                <input type="number" id="input-num" class="form-control" required>
+                <input type="number" name="input-num" id="input-num" class="form-control" required>
                 <button class="btn btn-outline-secondary" id="guess-btn">Guess</button>
                 <button type="button" class="btn btn-outline-secondary" id="new-game-btn">New game</button>
+				
+				<!-- Hidden fields -->
+				<input type="hidden" id="formMin" name="min" class="form-control">
+                <input type="hidden" id="formMax" name="max" class="form-control">
+                <input type="hidden" id="prNum" name="prNum" class="form-control">
+                <input type="hidden" id="attempts" name="attempts" class="form-control">
+				<input type="hidden" id="sum" name="sum" class="form-control">
+                <input type="hidden" id="end-game-flag" class="form-control" disable>
             </div>
-            <div class="lead" id="attempts"></div>
-            <p id="out" class="lead"></p>
         </div>
     </form>
     <hr>
@@ -40,14 +46,10 @@
         <div class="ms-3">or your guess is the correct number.</div>
         If the number is correct, the guesser wins.
     </div>
-
-    <!--div class="mt-5">
-        Test:
-        <span id="outNum"></span>
-    </div-->
 </footer>
 
 </body>
 <script type="text/javascript" src="js/bootstrap.bundle.js" defer></script>
 <script type="text/javascript" src="js/game.js" defer></script>
+</body>
 </html>
