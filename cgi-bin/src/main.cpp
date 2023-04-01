@@ -1,19 +1,83 @@
+//C++ 23
+//#include <cgicc>
 #include <iostream>
 #include <random>
 #include <tr1/unordered_map>
 
 std::string getInputVal(std::string, const std::string&);
 std::string encryptDecrypt(std::string);
+std::string replaceMask(std::string, const std::string&, const std::string&);
+
+std::string htmlPage = R"(
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../css/bootstrap.css" rel="stylesheet">
+</head>
+<body>
+<header></header>
+<main>
+    <form action="../cgi-bin/CheckTheNum.cgi" method="POST" class="form-inline" id="form">
+        <div class="container">
+            <h1 class="mt-0">
+                <span class="col-sm-auto">
+                    <label for="input-num" class="col-sm-auto">Your number:</label>
+                </span>
+            </h1>
+            <div class="input-group mb-3">
+                <input type="number" id="input-num" name="input-num" class="form-control" required %inputNumDisabled%>
+                <button class="btn btn-outline-secondary" id="guess-btn" %guessBtnDisabled%>Guess</button>
+                <button type="button" class="btn btn-outline-secondary" id="new-game-btn">New game</button>
+                <!-- Hidden fields -->
+                <input type="hidden" id="prNum" name="prNum" class="form-control" value="%prNum%">
+                <input type="hidden" id="attempts" name="attempts" class="form-control" value="%encryptAttempts%">
+                <input type="hidden" id="sum" name="sum" class="form-control" value="%sum%">
+                <input type="hidden" id="end-game-flag" class="form-control" value="%stopGame%" disable>
+            </div>
+            <div class="lead">Attempts: %attempts%</div>
+            <p class="lead">%outText%</p>
+        </div>
+    </form>
+    <hr>
+</main>
+<footer class="container">
+    <div>
+        The thinker thinks of a number from %min% to %max% inclusive.
+        The guesser has %totalAttempts% guesses to guess the number. If they take more than %totalAttempts% guesses to guess the number, they lose.
+        <div>
+            Every time the guesser guesses, the thinker must give one of three responses:
+        </div>
+        <div class="ms-3">your guess is too big,</div>
+        <div class="ms-3">your guess is too small,</div>
+        <div class="ms-3">or your guess is the correct number.</div>
+        If the number is correct, the guesser wins.
+    </div>
+</footer>
+</body>
+<script type="text/javascript" src="../js/game.js" defer></script>
+</html>
+)";
 
 int main() {
-    const std::string inputString = std::string(getenv("QUERY_STRING"));
-    //std::string inputString = "input-num=120&min=100&max=140&prNum=pu%7F&attempts=w&sum=pu%7Fw";
+    std::cout << "content-type:text/HTML\n\n\n";
+
+    std::string inputString;
+    try {
+        char* buf = new char[std::stoi(getenv("CONTENT_LENGTH")) + 1];
+        fgets(buf, std::stoi(getenv("CONTENT_LENGTH")) + 1, stdin);
+        inputString = buf;
+        delete[] buf;
+    } catch (std::exception& ex) {}
+    //inputString = "input-num=120&min=100&max=140&prNum=ptt&attempts=w&sum=pttw";
 
     std::tr1::unordered_map<std::string, std::string> param;
 
     param["input-num"] = getInputVal(inputString, "input-num=");
-    param["min"] = getInputVal(inputString, "min=");
-    param["max"] = getInputVal(inputString, "max=");
+    param["min"] = "100";
+    param["max"] = "140";
     param["prNum"] = getInputVal(inputString, "prNum=");
     param["attempts"] = getInputVal(inputString, "attempts=");
     param["sum"] = getInputVal(inputString, "sum=");
@@ -53,62 +117,19 @@ int main() {
         }
     }
 
+    htmlPage = replaceMask(htmlPage, "%prNum%", param["prNum"]);
+    htmlPage = replaceMask(htmlPage, "%encryptAttempts%", encryptDecrypt(param["attempts"]));
+    htmlPage = replaceMask(htmlPage, "%sum%", param["prNum"] + encryptDecrypt(param["attempts"]));
+    htmlPage = replaceMask(htmlPage, "%stopGame%",  std::to_string(stopGame));
+    htmlPage = replaceMask(htmlPage, "%attempts%", param["attempts"]);
+    htmlPage = replaceMask(htmlPage, "%totalAttempts%", std::to_string((int)ceil(log2(std::stoi(param["max"]) - std::stoi(param["min"]) + 1))));
+    htmlPage = replaceMask(htmlPage, "%outText%", outText);
+    htmlPage = replaceMask(htmlPage, "%min%", param["min"]);
+    htmlPage = replaceMask(htmlPage, "%max%", param["max"]);
+    htmlPage = replaceMask(htmlPage, "%inputNumDisabled%", (stopGame ? "disabled" : ""));
+    htmlPage = replaceMask(htmlPage, "%guessBtnDisabled%", (stopGame ? "disabled" : ""));
 
-    std::cout << "content-type:text/HTML\n\n" << std::endl;
-    std::cout
-    <<  "<!DOCTYPE html>"
-    <<  "<html lang=\"en\">"
-    <<  "<head>"
-        <<  "<meta charset=\"UTF-8\">"
-        <<  "<title>Document</title>"
-        <<  "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n"
-        <<  "<link href=\"../css/bootstrap.css\" rel=\"stylesheet\">\n"
-    <<  "</head>"
-    <<  "<body>"
-    <<  "<header></header>"
-    <<  "<main>"
-        <<  "<form action=\"../cgi-bin/test.cgi\" method=\"GET\" class=\"form-inline\" id=\"form\">\n"
-            <<  "<div class=\"container\">\n"
-                <<  "<h1 class=\"mt-0\">\n"
-                    <<  "<span class=\"col-sm-auto\">\n"
-                        <<  "<label for=\"input-num\" class=\"col-sm-auto\">Your number:</label>\n"
-                    <<  "</span>\n"
-                <<  "</h1>\n"
-                <<  "<div class=\"input-group mb-3\">\n"
-                    <<  "<input type=\"number\" id=\"input-num\" name=\"input-num\" class=\"form-control\" required>\n"
-                    <<  "<button class=\"btn btn-outline-secondary\" id=\"guess-btn\")>Guess</button>\n"
-                    <<  "<button type=\"button\" class=\"btn btn-outline-secondary\" id=\"new-game-btn\">New game</button>\n"
-                    <<  "<!-- Hidden fields -->\n"
-                    <<  "<input type=\"hidden\" id=\"formMin\" name=\"min\" class=\"form-control\">\n"
-                    <<  "<input type=\"hidden\" id=\"formMax\" name=\"max\" class=\"form-control\">\n"
-                    <<  R"(<input type="hidden" id="prNum" name="prNum" class="form-control" value=)" + param["prNum"] + ">\n"
-                    <<  R"(<input type="hidden" id="attempts" name="attempts" class="form-control" value=)" + encryptDecrypt(param["attempts"]) + ">\n"
-                    <<  R"(<input type="hidden" id="sum" name="sum" class="form-control" value=)" + param["prNum"] + encryptDecrypt(param["attempts"]) + ">\n"
-                    <<  R"(<input type="hidden" id="end-game-flag" class="form-control" value=)" + std::to_string(stopGame) + " disable>\n"
-                <<  "</div>\n"
-                <<  "<div class=\"lead\">Attempts: " + param["attempts"] + "</div>\n"
-                <<  "<p class=\"lead\">" + outText + "</p>\n"
-            <<  "</div>\n"
-        <<  "</form>\n"
-        <<  "<hr>"
-    <<  "</main>"
-    <<  "<footer class=\"container\">\n"
-        <<  "<div>\n"
-            <<  "The thinker thinks of a number from <span id=\"min\"></span> to <span id=\"max\"></span> inclusive.\n"
-            <<  "The guesser has <span id=\"attempts1\"></span> guesses to guess the number. If they take more than <span id=\"attempts2\"></span> guesses to guess the number, they lose.\n"
-            <<  "<div>\n"
-                <<  "Every time the guesser guesses, the thinker must give one of three responses:\n"
-            <<  "</div>\n"
-            <<  "<div class=\"ms-3\">your guess is too big,</div>\n"
-            <<  "<div class=\"ms-3\">your guess is too small,</div>\n"
-            <<  "<div class=\"ms-3\">or your guess is the correct number.</div>\n"
-            <<  "If the number is correct, the guesser wins.\n"
-        <<  "</div>\n"
-    <<  "</footer>"
-    <<  "</body>"
-    <<  "<script type=\"text/javascript\" src=\"../js/game.js\" defer></script>\n"
-    <<  "</html>";
-
+    std::cout << htmlPage;
     return 0;
 }
 
@@ -128,4 +149,11 @@ std::string encryptDecrypt(std::string toEncrypt) {
         output[i] = toEncrypt[i] ^ key[i % (sizeof(key) / sizeof(char))];
 
     return output;
+}
+
+std::string replaceMask(std::string str, const std::string& mask, const std::string& text) {
+    while (str.contains(mask)) {
+        str = replaceMask(str.replace(str.find(mask), mask.length(), text), mask, text);
+    }
+    return str;
 }

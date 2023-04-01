@@ -1,8 +1,8 @@
-# Install script for directory: D:/University/6 semester/Networks/GuessTheNumberCgi/cgi-bin/CgiScriptCode
+# Install script for directory: D:/University/6 semester/Networks/GuessTheNumber/cgi-bin/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/test")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/CheckTheNum")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/University/6 semester/Networks/GuessTheNumberCgi/cgi-bin/CgiScriptCode/cmake-build-release/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/University/6 semester/Networks/GuessTheNumber/cgi-bin/src/cmake-build-release/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

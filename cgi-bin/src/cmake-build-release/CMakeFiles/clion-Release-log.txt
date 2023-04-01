@@ -1,4 +1,4 @@
-"D:\JetBrains\CLion\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Release "-DCMAKE_MAKE_PROGRAM=D:/JetBrains/CLion/CLion 2022.3.2/bin/ninja/win/x64/ninja.exe" -G Ninja -S "D:\University\6 semester\Networks\GuessTheNumberCgi\cgi-bin\CgiScriptCode" -B "D:\University\6 semester\Networks\GuessTheNumberCgi\cgi-bin\CgiScriptCode\cmake-build-release"
+"D:\JetBrains\CLion\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Release -G "CodeBlocks - MinGW Makefiles" -S "D:\University\6 semester\Networks\GuessTheNumber\cgi-bin\src" -B "D:\University\6 semester\Networks\GuessTheNumber\cgi-bin\src\cmake-build-release"
 -- The C compiler identification is GNU 11.2.0
 -- The CXX compiler identification is GNU 11.2.0
 -- Detecting C compiler ABI info
@@ -13,4 +13,4 @@
 -- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: D:/University/6 semester/Networks/GuessTheNumberCgi/cgi-bin/CgiScriptCode/cmake-build-release
+-- Build files have been written to: D:/University/6 semester/Networks/GuessTheNumber/cgi-bin/src/cmake-build-release
