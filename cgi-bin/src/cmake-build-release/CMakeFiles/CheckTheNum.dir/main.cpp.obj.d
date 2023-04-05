@@ -184,4 +184,6 @@ CMakeFiles/CheckTheNum.dir/main.cpp.obj: \
  D:/JetBrains/CLion/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tr1/functional_hash.h \
  D:/JetBrains/CLion/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tr1/hashtable.h \
  D:/JetBrains/CLion/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tr1/hashtable_policy.h \
- D:/JetBrains/CLion/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tr1/unordered_map.h
+ D:/JetBrains/CLion/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tr1/unordered_map.h \
+ D:\University\6\ semester\Networks\GuessTheNumber\cgi-bin\src\utils.h \
+ D:\University\6\ semester\Networks\GuessTheNumber\cgi-bin\src\index.h

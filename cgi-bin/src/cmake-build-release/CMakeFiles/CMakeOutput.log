@@ -365,3 +365,99 @@ Parsed CXX implicit link information from above output:
   implicit fwks: []
 
 
+Determining if the include file sys/types.h exists passed with the following output:
+Change Dir: D:/University/6 semester/Networks/GuessTheNumber/cgi-bin/src/cmake-build-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):D:/JetBrains/CLion/CLion 2022.3.2/bin/mingw/bin/mingw32-make.exe -f Makefile cmTC_b7c2c/fast && D:/JetBrains/CLion/CLion 2022.3.2/bin/mingw/bin/mingw32-make.exe  -f CMakeFiles\cmTC_b7c2c.dir\build.make CMakeFiles/cmTC_b7c2c.dir/build
+mingw32-make[1]: Entering directory 'D:/University/6 semester/Networks/GuessTheNumber/cgi-bin/src/cmake-build-release/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b7c2c.dir/CheckIncludeFile.c.obj
+"D:\JetBrains\CLion\CLion 2022.3.2\bin\mingw\bin\gcc.exe"   -fdiagnostics-color=always -o CMakeFiles\cmTC_b7c2c.dir\CheckIncludeFile.c.obj -c "D:\University\6 semester\Networks\GuessTheNumber\cgi-bin\src\cmake-build-release\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
+Linking C executable cmTC_b7c2c.exe
+"D:\JetBrains\CLion\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_b7c2c.dir\link.txt --verbose=1
+"D:\JetBrains\CLion\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_b7c2c.dir/objects.a
+"D:\JetBrains\CLion\CLion 2022.3.2\bin\mingw\bin\ar.exe" qc CMakeFiles\cmTC_b7c2c.dir/objects.a @CMakeFiles\cmTC_b7c2c.dir\objects1.rsp
+"D:\JetBrains\CLion\CLion 2022.3.2\bin\mingw\bin\gcc.exe" -Wl,--whole-archive CMakeFiles\cmTC_b7c2c.dir/objects.a -Wl,--no-whole-archive -o cmTC_b7c2c.exe -Wl,--out-implib,libcmTC_b7c2c.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_b7c2c.dir\linklibs.rsp
+mingw32-make[1]: Leaving directory 'D:/University/6 semester/Networks/GuessTheNumber/cgi-bin/src/cmake-build-release/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the include file stdint.h exists passed with the following output:
+Change Dir: D:/University/6 semester/Networks/GuessTheNumber/cgi-bin/src/cmake-build-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):D:/JetBrains/CLion/CLion 2022.3.2/bin/mingw/bin/mingw32-make.exe -f Makefile cmTC_43bb8/fast && D:/JetBrains/CLion/CLion 2022.3.2/bin/mingw/bin/mingw32-make.exe  -f CMakeFiles\cmTC_43bb8.dir\build.make CMakeFiles/cmTC_43bb8.dir/build
+mingw32-make[1]: Entering directory 'D:/University/6 semester/Networks/GuessTheNumber/cgi-bin/src/cmake-build-release/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_43bb8.dir/CheckIncludeFile.c.obj
+"D:\JetBrains\CLion\CLion 2022.3.2\bin\mingw\bin\gcc.exe"   -fdiagnostics-color=always -o CMakeFiles\cmTC_43bb8.dir\CheckIncludeFile.c.obj -c "D:\University\6 semester\Networks\GuessTheNumber\cgi-bin\src\cmake-build-release\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
+Linking C executable cmTC_43bb8.exe
+"D:\JetBrains\CLion\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_43bb8.dir\link.txt --verbose=1
+"D:\JetBrains\CLion\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_43bb8.dir/objects.a
+"D:\JetBrains\CLion\CLion 2022.3.2\bin\mingw\bin\ar.exe" qc CMakeFiles\cmTC_43bb8.dir/objects.a @CMakeFiles\cmTC_43bb8.dir\objects1.rsp
+"D:\JetBrains\CLion\CLion 2022.3.2\bin\mingw\bin\gcc.exe" -Wl,--whole-archive CMakeFiles\cmTC_43bb8.dir/objects.a -Wl,--no-whole-archive -o cmTC_43bb8.exe -Wl,--out-implib,libcmTC_43bb8.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_43bb8.dir\linklibs.rsp
+mingw32-make[1]: Leaving directory 'D:/University/6 semester/Networks/GuessTheNumber/cgi-bin/src/cmake-build-release/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the include file stddef.h exists passed with the following output:
+Change Dir: D:/University/6 semester/Networks/GuessTheNumber/cgi-bin/src/cmake-build-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):D:/JetBrains/CLion/CLion 2022.3.2/bin/mingw/bin/mingw32-make.exe -f Makefile cmTC_819d9/fast && D:/JetBrains/CLion/CLion 2022.3.2/bin/mingw/bin/mingw32-make.exe  -f CMakeFiles\cmTC_819d9.dir\build.make CMakeFiles/cmTC_819d9.dir/build
+mingw32-make[1]: Entering directory 'D:/University/6 semester/Networks/GuessTheNumber/cgi-bin/src/cmake-build-release/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_819d9.dir/CheckIncludeFile.c.obj
+"D:\JetBrains\CLion\CLion 2022.3.2\bin\mingw\bin\gcc.exe"   -fdiagnostics-color=always -o CMakeFiles\cmTC_819d9.dir\CheckIncludeFile.c.obj -c "D:\University\6 semester\Networks\GuessTheNumber\cgi-bin\src\cmake-build-release\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
+Linking C executable cmTC_819d9.exe
+"D:\JetBrains\CLion\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_819d9.dir\link.txt --verbose=1
+"D:\JetBrains\CLion\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_819d9.dir/objects.a
+"D:\JetBrains\CLion\CLion 2022.3.2\bin\mingw\bin\ar.exe" qc CMakeFiles\cmTC_819d9.dir/objects.a @CMakeFiles\cmTC_819d9.dir\objects1.rsp
+"D:\JetBrains\CLion\CLion 2022.3.2\bin\mingw\bin\gcc.exe" -Wl,--whole-archive CMakeFiles\cmTC_819d9.dir/objects.a -Wl,--no-whole-archive -o cmTC_819d9.exe -Wl,--out-implib,libcmTC_819d9.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_819d9.dir\linklibs.rsp
+mingw32-make[1]: Leaving directory 'D:/University/6 semester/Networks/GuessTheNumber/cgi-bin/src/cmake-build-release/CMakeFiles/CMakeTmp'
+
+
+
+Determining size of long passed with the following output:
+Change Dir: D:/University/6 semester/Networks/GuessTheNumber/cgi-bin/src/cmake-build-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):D:/JetBrains/CLion/CLion 2022.3.2/bin/mingw/bin/mingw32-make.exe -f Makefile cmTC_b8c78/fast && D:/JetBrains/CLion/CLion 2022.3.2/bin/mingw/bin/mingw32-make.exe  -f CMakeFiles\cmTC_b8c78.dir\build.make CMakeFiles/cmTC_b8c78.dir/build
+mingw32-make[1]: Entering directory 'D:/University/6 semester/Networks/GuessTheNumber/cgi-bin/src/cmake-build-release/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b8c78.dir/LONG_INT.c.obj
+"D:\JetBrains\CLion\CLion 2022.3.2\bin\mingw\bin\gcc.exe"   -fdiagnostics-color=always -o CMakeFiles\cmTC_b8c78.dir\LONG_INT.c.obj -c "D:\University\6 semester\Networks\GuessTheNumber\cgi-bin\src\cmake-build-release\CMakeFiles\CheckTypeSize\LONG_INT.c"
+Linking C executable cmTC_b8c78.exe
+"D:\JetBrains\CLion\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_b8c78.dir\link.txt --verbose=1
+"D:\JetBrains\CLion\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_b8c78.dir/objects.a
+"D:\JetBrains\CLion\CLion 2022.3.2\bin\mingw\bin\ar.exe" qc CMakeFiles\cmTC_b8c78.dir/objects.a @CMakeFiles\cmTC_b8c78.dir\objects1.rsp
+"D:\JetBrains\CLion\CLion 2022.3.2\bin\mingw\bin\gcc.exe" -Wl,--whole-archive CMakeFiles\cmTC_b8c78.dir/objects.a -Wl,--no-whole-archive -o cmTC_b8c78.exe -Wl,--out-implib,libcmTC_b8c78.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_b8c78.dir\linklibs.rsp
+mingw32-make[1]: Leaving directory 'D:/University/6 semester/Networks/GuessTheNumber/cgi-bin/src/cmake-build-release/CMakeFiles/CMakeTmp'
+
+
+
+Determining size of long long passed with the following output:
+Change Dir: D:/University/6 semester/Networks/GuessTheNumber/cgi-bin/src/cmake-build-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):D:/JetBrains/CLion/CLion 2022.3.2/bin/mingw/bin/mingw32-make.exe -f Makefile cmTC_feaf7/fast && D:/JetBrains/CLion/CLion 2022.3.2/bin/mingw/bin/mingw32-make.exe  -f CMakeFiles\cmTC_feaf7.dir\build.make CMakeFiles/cmTC_feaf7.dir/build
+mingw32-make[1]: Entering directory 'D:/University/6 semester/Networks/GuessTheNumber/cgi-bin/src/cmake-build-release/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_feaf7.dir/LONG_LONG_INT.c.obj
+"D:\JetBrains\CLion\CLion 2022.3.2\bin\mingw\bin\gcc.exe"   -fdiagnostics-color=always -o CMakeFiles\cmTC_feaf7.dir\LONG_LONG_INT.c.obj -c "D:\University\6 semester\Networks\GuessTheNumber\cgi-bin\src\cmake-build-release\CMakeFiles\CheckTypeSize\LONG_LONG_INT.c"
+Linking C executable cmTC_feaf7.exe
+"D:\JetBrains\CLion\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_feaf7.dir\link.txt --verbose=1
+"D:\JetBrains\CLion\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_feaf7.dir/objects.a
+"D:\JetBrains\CLion\CLion 2022.3.2\bin\mingw\bin\ar.exe" qc CMakeFiles\cmTC_feaf7.dir/objects.a @CMakeFiles\cmTC_feaf7.dir\objects1.rsp
+"D:\JetBrains\CLion\CLion 2022.3.2\bin\mingw\bin\gcc.exe" -Wl,--whole-archive CMakeFiles\cmTC_feaf7.dir/objects.a -Wl,--no-whole-archive -o cmTC_feaf7.exe -Wl,--out-implib,libcmTC_feaf7.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_feaf7.dir\linklibs.rsp
+mingw32-make[1]: Leaving directory 'D:/University/6 semester/Networks/GuessTheNumber/cgi-bin/src/cmake-build-release/CMakeFiles/CMakeTmp'
+
+
+
+Determining size of int passed with the following output:
+Change Dir: D:/University/6 semester/Networks/GuessTheNumber/cgi-bin/src/cmake-build-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):D:/JetBrains/CLion/CLion 2022.3.2/bin/mingw/bin/mingw32-make.exe -f Makefile cmTC_fd8b0/fast && D:/JetBrains/CLion/CLion 2022.3.2/bin/mingw/bin/mingw32-make.exe  -f CMakeFiles\cmTC_fd8b0.dir\build.make CMakeFiles/cmTC_fd8b0.dir/build
+mingw32-make[1]: Entering directory 'D:/University/6 semester/Networks/GuessTheNumber/cgi-bin/src/cmake-build-release/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fd8b0.dir/INT.c.obj
+"D:\JetBrains\CLion\CLion 2022.3.2\bin\mingw\bin\gcc.exe"   -fdiagnostics-color=always -o CMakeFiles\cmTC_fd8b0.dir\INT.c.obj -c "D:\University\6 semester\Networks\GuessTheNumber\cgi-bin\src\cmake-build-release\CMakeFiles\CheckTypeSize\INT.c"
+Linking C executable cmTC_fd8b0.exe
+"D:\JetBrains\CLion\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_fd8b0.dir\link.txt --verbose=1
+"D:\JetBrains\CLion\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_fd8b0.dir/objects.a
+"D:\JetBrains\CLion\CLion 2022.3.2\bin\mingw\bin\ar.exe" qc CMakeFiles\cmTC_fd8b0.dir/objects.a @CMakeFiles\cmTC_fd8b0.dir\objects1.rsp
+"D:\JetBrains\CLion\CLion 2022.3.2\bin\mingw\bin\gcc.exe" -Wl,--whole-archive CMakeFiles\cmTC_fd8b0.dir/objects.a -Wl,--no-whole-archive -o cmTC_fd8b0.exe -Wl,--out-implib,libcmTC_fd8b0.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_fd8b0.dir\linklibs.rsp
+mingw32-make[1]: Leaving directory 'D:/University/6 semester/Networks/GuessTheNumber/cgi-bin/src/cmake-build-release/CMakeFiles/CMakeTmp'
+
+
+

@@ -61,6 +61,26 @@
 					<DistClean command="D:/JetBrains/CLion/CLion 2022.3.2/bin/mingw/bin/mingw32-make.exe -f &quot;D:/University/6 semester/Networks/GuessTheNumber/cgi-bin/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="package">
+				<Option working_dir="D:/University/6 semester/Networks/GuessTheNumber/cgi-bin/src/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/JetBrains/CLion/CLion 2022.3.2/bin/mingw/bin/mingw32-make.exe -f &quot;D:/University/6 semester/Networks/GuessTheNumber/cgi-bin/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 package"/>
+					<CompileFile command="D:/JetBrains/CLion/CLion 2022.3.2/bin/mingw/bin/mingw32-make.exe -f &quot;D:/University/6 semester/Networks/GuessTheNumber/cgi-bin/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/JetBrains/CLion/CLion 2022.3.2/bin/mingw/bin/mingw32-make.exe -f &quot;D:/University/6 semester/Networks/GuessTheNumber/cgi-bin/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/JetBrains/CLion/CLion 2022.3.2/bin/mingw/bin/mingw32-make.exe -f &quot;D:/University/6 semester/Networks/GuessTheNumber/cgi-bin/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="package_source">
+				<Option working_dir="D:/University/6 semester/Networks/GuessTheNumber/cgi-bin/src/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/JetBrains/CLion/CLion 2022.3.2/bin/mingw/bin/mingw32-make.exe -f &quot;D:/University/6 semester/Networks/GuessTheNumber/cgi-bin/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 package_source"/>
+					<CompileFile command="D:/JetBrains/CLion/CLion 2022.3.2/bin/mingw/bin/mingw32-make.exe -f &quot;D:/University/6 semester/Networks/GuessTheNumber/cgi-bin/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/JetBrains/CLion/CLion 2022.3.2/bin/mingw/bin/mingw32-make.exe -f &quot;D:/University/6 semester/Networks/GuessTheNumber/cgi-bin/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/JetBrains/CLion/CLion 2022.3.2/bin/mingw/bin/mingw32-make.exe -f &quot;D:/University/6 semester/Networks/GuessTheNumber/cgi-bin/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="edit_cache">
 				<Option working_dir="D:/University/6 semester/Networks/GuessTheNumber/cgi-bin/src/cmake-build-debug"/>
 				<Option type="4"/>
@@ -82,7 +102,13 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="D:/University/6 semester/Networks/GuessTheNumber/cgi-bin/src/index.h">
+			<Option target="CheckTheNum"/>
+		</Unit>
 		<Unit filename="D:/University/6 semester/Networks/GuessTheNumber/cgi-bin/src/main.cpp">
+			<Option target="CheckTheNum"/>
+		</Unit>
+		<Unit filename="D:/University/6 semester/Networks/GuessTheNumber/cgi-bin/src/utils.h">
 			<Option target="CheckTheNum"/>
 		</Unit>
 		<Unit filename="D:/University/6 semester/Networks/GuessTheNumber/cgi-bin/src/CMakeLists.txt">

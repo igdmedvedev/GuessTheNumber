@@ -64,6 +64,26 @@ CMAKE_BINARY_DIR = "D:\University\6 semester\Networks\GuessTheNumber\cgi-bin\src
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target package
+package: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
+	"D:\JetBrains\CLion\CLion 2022.3.2\bin\cmake\win\x64\bin\cpack.exe" --config ./CPackConfig.cmake
+.PHONY : package
+
+# Special rule for the target package
+package/fast: package
+.PHONY : package/fast
+
+# Special rule for the target package_source
+package_source:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
+	"D:\JetBrains\CLion\CLion 2022.3.2\bin\cmake\win\x64\bin\cpack.exe" --config ./CPackSourceConfig.cmake "D:/University/6 semester/Networks/GuessTheNumber/cgi-bin/src/cmake-build-release/CPackSourceConfig.cmake"
+.PHONY : package_source
+
+# Special rule for the target package_source
+package_source/fast: package_source
+.PHONY : package_source/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -159,6 +179,8 @@ help:
 	@echo ... clean
 	@echo ... depend
 	@echo ... edit_cache
+	@echo ... package
+	@echo ... package_source
 	@echo ... rebuild_cache
 	@echo ... CheckTheNum
 	@echo ... main.obj

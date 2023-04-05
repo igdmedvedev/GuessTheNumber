@@ -186,7 +186,9 @@ CMakeFiles/CheckTheNum.dir/main.cpp.obj: D:/University/6\ semester/Networks/Gues
   D:/JetBrains/CLion/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tr1/functional_hash.h \
   D:/JetBrains/CLion/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tr1/hashtable.h \
   D:/JetBrains/CLion/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tr1/hashtable_policy.h \
-  D:/JetBrains/CLion/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tr1/unordered_map.h
+  D:/JetBrains/CLion/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tr1/unordered_map.h \
+  D:/University/6\ semester/Networks/GuessTheNumber/cgi-bin/src/utils.h \
+  D:/University/6\ semester/Networks/GuessTheNumber/cgi-bin/src/index.h
 
 
 D:/JetBrains/CLion/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/stddef.h:
@@ -284,6 +286,8 @@ D:/JetBrains/CLion/CLion\ 2022.3.2/bin/mingw/x86_64-w64-mingw32/include/_mingw_o
 D:/JetBrains/CLion/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tr1/unordered_map.h:
 
 D:/JetBrains/CLion/CLion\ 2022.3.2/bin/mingw/x86_64-w64-mingw32/include/_mingw_stat64.h:
+
+D:/University/6\ semester/Networks/GuessTheNumber/cgi-bin/src/utils.h:
 
 D:/JetBrains/CLion/CLion\ 2022.3.2/bin/mingw/x86_64-w64-mingw32/include/corecrt_startup.h:
 
@@ -560,3 +564,5 @@ D:/JetBrains/CLion/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/i
 D:/JetBrains/CLion/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tr1/type_traits:
 
 D:/JetBrains/CLion/CLion\ 2022.3.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/tr1/hashtable.h:
+
+D:/University/6\ semester/Networks/GuessTheNumber/cgi-bin/src/index.h:
