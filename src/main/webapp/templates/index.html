@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Guess the number</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/styles/css/bootstrap.css" rel="stylesheet">
+</head>
+<body>
+<header></header>
+<main>
+    <form class="form-inline" id="form" method="POST">
+        <div class="container">
+            <h1 class="mt-0">
+                <span class="col-sm-auto">
+                    <label for="input-num" class="col-sm-auto">Your number:</label>
+                </span>
+            </h1>
+            <div class="input-group mb-3">
+                <input type="number" id="input-num" name="input-num" class="form-control" required
+                       th:min="${min}" th:max="${max}" th:disabled="${end_game}">
+                <button class="btn btn-outline-secondary" id="guess-btn" th:disabled="${end_game}">Guess</button>
+                <a href="/" class="btn btn-secondary" id="new-game-btn">New game</a>
+            </div>
+            <div class="lead">Attempts: <span class="lead" th:text="${attempts}"></span></div>
+            <p th:text="${game_info}" class="lead"></p>
+        </div>
+    </form>
+    <hr>
+</main>
+
+<footer class="container">
+    <div>
+        The thinker thinks of a number from <span th:text="${min}"></span> to <span th:text="${max}"></span> inclusive.
+        The guesser has <span th:text="${total_attempts}"></span> guesses to guess the number. If they take more than <span th:text="${total_attempts}"></span>
+        guesses to guess the number, they lose.
+        <div>Every time the guesser guesses, the thinker must give one of three responses:</div>
+        <div class="ms-3">your guess is too big,</div>
+        <div class="ms-3">your guess is too small,</div>
+        <div class="ms-3">or your guess is the correct number.</div>
+        If the number is correct, the guesser wins.
+    </div>
+</footer>
+</body>
+<script type="text/javascript" defer>
+    let inputNum = document.getElementById('input-num');
+
+    if (inputNum.disabled === true) {
+        document.getElementById('new-game-btn').focus();
+    } else {
+        inputNum.focus();
+    }
+</script>
+</html>
